@@ -1,25 +1,46 @@
 
+--- 
 **New Feature Launch**
+drawio-desktop-29.3.6-ai-copilot-v1.0.0
+
+---
+Live Working demo for setup & Haw to Use   : 
+---
+
+Comming Soon
+
+---
 # AI Copilot Launch- Draw.io — Smart Diagram Generator 
 
-AI Copilot is an intelligent diagram assistant integrated into Draw.io Desktop that converts natural language into structured diagrams. It helps users quickly generate flowcharts, system architectures, process maps, agent workflows, trees, and connected diagrams — without manual block placement.
+- Based on draw.io desktop v29.3.6 with AI Copilot enhancements
 
-This tool is designed for developers, architects, students, analysts, and product teams who want fast diagram creation from human-readable instructions.
+- AI Copilot for draw.io that draw any diagrams even most complex diagrams in 2 sec- 
+
+- Diagrams — auto-creates shapes, layouts, and connections from user instructions.
+
+Helps users quickly generate:
+- flowcharts
+- system architectures 
+- process maps
+- agent workflows
+- trees, and connected diagrams — without manual block placement.
+
+**This tool is designed for developers, architects, students, analysts, and product teams who want fast diagram creation from human-readable instructions.**
 
 ---
 
 ---
-### 🔐 API Key Setup (Required)
+# 🔐 API Key Setup (Required)
 
 AI Copilot needs an LLM API key to generate diagrams from natural language.
 
 Steps:
 
-Open AI Copilot → Settings
+-> AI-Copilot → Settings
 
-Select your model provider
+-> Select your model provider
 
-Paste your API key
+-> Paste your API key
 
 Click Save
 
@@ -33,29 +54,19 @@ Based on tested results and diagram quality:
 
 ✅ Preferred (Best diagram reasoning + structure):
 
-Claude
+Gemini - free
 
-Gemini
+Claude - paid
 
 ⚠️ Use GPT only if needed
 
 Works fine for simple flows
 
 May produce weaker structure for very complex architectures compared to Claude/Gemini
+as per individual experience
 
-🧠 Model Selection Tip
 
-If your diagram is:
-
-Large architecture → Use Claude
-
-Multi-agent / routing / layered system → Use Claude
-
-Flowcharts & structured logic → Use Gemini
-
-Quick simple shapes → Any model works
-
-🔑 Where to Get API Keys
+# 🔑 Where to Get API Keys
 
 Claude → Anthropic Console
 
@@ -63,7 +74,41 @@ Gemini → Google AI Studio
 
 GPT → OpenAI Platform
 
-(Create key → copy → paste into Copilot Settings)
+---
+# AI- API Access Directory
+
+| Provider | Model | Dashboard Link |
+| :--- | :--- | :--- |
+| **Google** | Gemini | [aistudio.google.com](https://aistudio.google.com/) |
+| **Anthropic** | Claude | [console.anthropic.com](https://console.anthropic.com/) |
+| **OpenAI** | GPT-4o / GPT-3.5 | [platform.openai.com](https://platform.openai.com/api-keys) |
+
+---
+
+## 🔑 Quick Setup Instructions
+
+### 1. Google Gemini
+* **Dashboard:** [Google AI Studio](https://aistudio.google.com/)
+* **Steps:** 1. Sign in with your Google Account.
+    2. Click **"Get API key"** in the sidebar.
+    3. Click **"Create API key in new project"**.
+
+### 2. Anthropic Claude
+* **Dashboard:** [Anthropic Console](https://console.anthropic.com/)
+* **Steps:** 1. Log in and navigate to the **"API Keys"** tab.
+    2. Click **"Create Key"**.
+    3. *Note:* You typically need to buy at least $5 in credits to start using the API.
+
+### 3. OpenAI GPT
+* **Dashboard:** [OpenAI Platform](https://platform.openai.com/api-keys)
+* **Steps:** 1. Log in to your developer account.
+    2. Click **"+ Create new secret key"**.
+    3. Copy the key immediately; it will be hidden once you close the popup.
+
+---
+
+
+(Create key → copy → paste into Copilot Settings → Copilot Ready)
 ---
 
 # Core Capabilities
@@ -72,6 +117,7 @@ GPT → OpenAI Platform
 Describe what you want in plain English — Copilot generates connected diagram structures automatically.
 
 Examples:
+
 - User login flow with validation and error branch
 - Microservice architecture with API gateway and database
 - HR and IT agent routing workflow
@@ -110,9 +156,8 @@ Single Shape Mode examples:
 - draw five nodes not connected
 
 Connected Flow Mode examples:
-- start → process → decision → end
-- user submits form then validate then store
-- controller calls service calls repository
+
+- Draw flow chart: start → process → decision → end
 
 ---
 
@@ -161,51 +206,155 @@ Step 4 — Edit shapes manually if needed (all output is standard Draw.io object
 
 ---
 
-## Prompt Writing Guide
+# Prompt Writing Guide
 
 Best pattern: short step‑style flow description instead of essays.
 
-Good:
-Start → validate input → if valid save → else error → end
 
-Better:
-User sends request to API → API calls service → service reads database → response returned
 
 ---
 
 ## Tested Prompt Examples
 
-Simple shapes:
-draw a circle  
-create three rectangles not connected  
-add two databases and one process block  
+You can copy paste below prompt as it is & see the magic
 
-Basic flow:
-start process decision valid yes dashboard no error end
-
-Login flow:
+**Single Shapes**:
+---
+```
+* Draw a diamond Shape
+```
+```
+* Draw three circles named A B C
+```
+```
+* Make one decision node called Valid?
+```
+---
+**Basic flow:**
+---
+```
+* Daw circle → square → diamond → database    connect all
+```
+```
+* Draw Login flow:
 User logs in → validate → if valid dashboard → else error → end
+```
 
-API layered flow:
-Controller calls service → service calls repository → repository queries database → result returns
-
-Data pipeline:
-Receive CSV → validate → if invalid stop → if valid transform → load warehouse → retry on failure → alert admin
-
-Agent workflow:
-User query → router decides HR or IT → HR agent uses HR tool → IT agent uses ticket tool → both return → router responds
-
-Architecture:
-UI → API gateway → auth service + order service → databases → logging → response
-
-Tree:
-Decision tree for loan approval with credit score branches
-
-Parallel flow:
-Start → split processing and logging → join → output
 
 ---
+**Advanced Structures**
+---
 
+```
+* Draw Start node called User Start.
+Then process Validate Input.
+Then decision Is Input Valid.
+If yes go to Save Data.
+If no go to Show Error.
+Both paths end at End node
+```
+---
+**Complex Architecture**
+--
+
+```Create a detailed architecture flow diagram for an agentic chatbot system.
+
+Start from a UI / Web App / Corporate App where the user sends a message and later receives a response back.
+
+Flow:
+
+User message goes to a FastAPI chat endpoint.
+
+From the endpoint, the message is sent to a Supervisor Router that controls routing and decisions.
+
+The router also stores and fetches conversation context using a Memory Manager that connects to a Chat Repository and a Chat Sessions table database.
+
+The Supervisor Router asks a decision question like “HR or IT request?” and performs intent classification.
+
+From this decision, branch into two parallel agent paths:
+
+Branch 1 — HR path:
+Route to HR Agent.
+HR Agent calls an HR Tool with parameters.
+HR Tool writes data into Employee Repository.
+Employee Repository stores into Employees Table database.
+Results return back from HR Tool → HR Agent → LLM Client → Supervisor Router.
+
+Branch 2 — IT path:
+Route to IT Agent.
+IT Agent calls an IT Tool with parameters.
+IT Tool writes into IT Ticket Repository.
+IT Ticket Repository stores into IT Tickets Table database.
+Results return back from IT Tool → IT Agent → LLM Client → Supervisor Router.
+
+Both HR Agent and IT Agent interact with a central LLM Client for reasoning and parameter parsing.
+
+The LLM Client also receives past context from Chat Sessions storage.
+
+Finally, Supervisor Router sends the final response back to FastAPI endpoint and then back to the UI app as user response.
+
+Requirements:
+- Show databases as database shapes
+- Show agents and tools as process blocks
+- Show router and LLM client clearly
+- Show decision branching at router
+- Show arrows for full round-trip flow
+- Keep it as a connected architecture flow
+```
+---
+**System Design**
+---
+---
+```
+Draw a layered GenAI architecture diagram with grouped sections and explicit connections.
+
+GROUP: Application Startup
+Framework Bootstrap -> Scan Documents Folder -> Knowledge Registry -> Ingestion Pipeline -> Vector Creation -> Vector Store
+
+Knowledge Registry -> Ingestion Pipeline (only if new or changed)
+Knowledge Registry -> Vector Store (if unchanged)
+
+GROUP: Client / Developer Inputs
+Company Documents -> Plugin Manager
+Custom Functions -> Plugin Manager
+Configuration YAML JSON -> Plugin Manager
+
+GROUP: Core GenAI Framework
+API Query -> Intent and Tool Router
+Intent and Tool Router -> Plugin Manager
+
+Plugin Manager -> Orchestration Engine (if plugin matched)
+Plugin Manager -> Retrieval Layer (if no plugin)
+
+Retrieval Layer -> Vector Store
+Retrieval Layer -> Structured Database
+Retrieval Layer -> Orchestration Engine
+
+Orchestration Engine -> Session Memory
+Orchestration Engine -> Company Context
+Orchestration Engine -> Observability
+Orchestration Engine -> Cost Policy Manager
+
+Cost Policy Manager -> LLM Provider (allowed)
+Cost Policy Manager -> Stop LLM Call (blocked)
+
+LLM Provider -> Embedding Provider
+
+GROUP: Execution Layer
+External APIs -> Orchestration Engine
+Orchestration Engine -> Standard Response
+
+Standard Response -> Structured Database
+
+Use:
+- rectangles for services
+- diamonds for decisions
+- cylinders for databases
+- grouped containers for each layer
+- label decision edges: plugin matched / no plugin / allowed / blocked
+
+```
+---
 ## Tips for Better Results
 
 - Use arrows or words like then, next, after
@@ -254,8 +403,23 @@ Start → split processing and logging → join → output
 
 AI Copilot accelerates diagram creation. Generate fast, refine visually, deliver professionally.
 
+---
+
+***Author & Copilot Developer***
+
+***ML/AI- Professional*** - 
+***Mr. Karan Kamble***  
+
+Tech Profile :
+https://github.com/AI-Solutions-KK
+
+
+Linkedin Profile : https://www.linkedin.com/in/karan-tatyaso-kamble-b06762383/
 
 ---
+
+FROM BASE REPO
+
 About
 ----- 
 
