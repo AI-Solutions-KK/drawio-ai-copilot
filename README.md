@@ -1,4 +1,8 @@
 <meta name="google-site-verification" content="XXXXX" />
+<meta name="description" content="AI Diagram Generator - Copilot for draw.io Desktop. Auto-creates shapes, layouts, and connections from user instructions.">
+<meta name="keywords" content="drawio, AI copilot, diagram generator, draw.io desktop, AI diagram">
+<meta name="author" content="AI Solutions KK">
+
 
 ---
 # AI Diagram Generator - Copilot for draw.io Desktop — text to  Diagram Generator
