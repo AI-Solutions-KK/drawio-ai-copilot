@@ -1,3 +1,261 @@
+
+**New Feature Launch**
+# AI Copilot Launch- Draw.io — Smart Diagram Generator 
+
+AI Copilot is an intelligent diagram assistant integrated into Draw.io Desktop that converts natural language into structured diagrams. It helps users quickly generate flowcharts, system architectures, process maps, agent workflows, trees, and connected diagrams — without manual block placement.
+
+This tool is designed for developers, architects, students, analysts, and product teams who want fast diagram creation from human-readable instructions.
+
+---
+
+---
+### 🔐 API Key Setup (Required)
+
+AI Copilot needs an LLM API key to generate diagrams from natural language.
+
+Steps:
+
+Open AI Copilot → Settings
+
+Select your model provider
+
+Paste your API key
+
+Click Save
+
+Generate diagram normally
+
+No restart required.
+
+### 🤖 Recommended Model Providers
+
+Based on tested results and diagram quality:
+
+✅ Preferred (Best diagram reasoning + structure):
+
+Claude
+
+Gemini
+
+⚠️ Use GPT only if needed
+
+Works fine for simple flows
+
+May produce weaker structure for very complex architectures compared to Claude/Gemini
+
+🧠 Model Selection Tip
+
+If your diagram is:
+
+Large architecture → Use Claude
+
+Multi-agent / routing / layered system → Use Claude
+
+Flowcharts & structured logic → Use Gemini
+
+Quick simple shapes → Any model works
+
+🔑 Where to Get API Keys
+
+Claude → Anthropic Console
+
+Gemini → Google AI Studio
+
+GPT → OpenAI Platform
+
+(Create key → copy → paste into Copilot Settings)
+---
+
+# Core Capabilities
+
+### Natural Language → Diagram
+Describe what you want in plain English — Copilot generates connected diagram structures automatically.
+
+Examples:
+- User login flow with validation and error branch
+- Microservice architecture with API gateway and database
+- HR and IT agent routing workflow
+
+No strict syntax required.
+
+---
+
+### Supported Diagram Types
+
+Copilot can generate:
+
+- Flowcharts
+- System architecture diagrams
+- Agent workflows
+- API & backend architecture
+- Data pipelines
+- Decision trees
+- Control flow diagrams
+- Service interaction maps
+- Layered architecture
+- Tool‑agent pipelines
+- Validation flows
+- Branching logic diagrams
+
+---
+
+### Simple + Complex Mode
+
+Copilot adapts to request complexity.
+
+Single Shape Mode examples:
+- draw a circle
+- create three rectangles
+- add a database block
+- draw five nodes not connected
+
+Connected Flow Mode examples:
+- start → process → decision → end
+- user submits form then validate then store
+- controller calls service calls repository
+
+---
+
+### Smart Intent Detection
+
+Copilot detects:
+- steps
+- decisions
+- branches
+- loops
+- tools
+- repositories
+- databases
+- routers
+- agents
+- pipelines
+
+---
+
+### Auto Layout Engine
+
+Generated diagrams are automatically:
+- spaced properly
+- non‑overlapping
+- hierarchy aligned
+- edge routed
+- readable at scale
+
+---
+
+### Model Flexibility
+
+Supports multiple AI providers selectable in settings depending on quality, speed, or quota.
+
+---
+
+## User Guide
+
+Step 1 — Open Copilot panel inside Draw.io.
+
+Step 2 — Enter diagram description using natural language.
+
+Step 3 — Click Generate Diagram.
+
+Step 4 — Edit shapes manually if needed (all output is standard Draw.io objects).
+
+---
+
+## Prompt Writing Guide
+
+Best pattern: short step‑style flow description instead of essays.
+
+Good:
+Start → validate input → if valid save → else error → end
+
+Better:
+User sends request to API → API calls service → service reads database → response returned
+
+---
+
+## Tested Prompt Examples
+
+Simple shapes:
+draw a circle  
+create three rectangles not connected  
+add two databases and one process block  
+
+Basic flow:
+start process decision valid yes dashboard no error end
+
+Login flow:
+User logs in → validate → if valid dashboard → else error → end
+
+API layered flow:
+Controller calls service → service calls repository → repository queries database → result returns
+
+Data pipeline:
+Receive CSV → validate → if invalid stop → if valid transform → load warehouse → retry on failure → alert admin
+
+Agent workflow:
+User query → router decides HR or IT → HR agent uses HR tool → IT agent uses ticket tool → both return → router responds
+
+Architecture:
+UI → API gateway → auth service + order service → databases → logging → response
+
+Tree:
+Decision tree for loan approval with credit score branches
+
+Parallel flow:
+Start → split processing and logging → join → output
+
+---
+
+## Tips for Better Results
+
+- Use arrows or words like then, next, after
+- Mention decisions explicitly
+- Name components clearly
+- Use yes/no branches
+- Say “not connected” if no edges desired
+- List architecture components and relationships
+
+---
+
+## Known Behavior
+
+- Very complex diagrams need clearer step wording
+- Dense graphs improve with ordered prompts
+- No‑connection diagrams require explicit wording
+
+---
+
+## Ideal Use Cases
+
+- Software architecture design
+- Backend flow mapping
+- Agent systems
+- AI pipelines
+- DevOps flows
+- Business processes
+- Decision trees
+- Data pipelines
+- API maps
+- Tool orchestration diagrams
+
+---
+
+## Advantages
+
+- Natural language driven
+- No rigid syntax
+- Simple to enterprise diagrams
+- Clean auto layout
+- Fully editable output
+- Multi‑model compatible
+- Fast diagram bootstrapping
+
+---
+
+AI Copilot accelerates diagram creation. Generate fast, refine visually, deliver professionally.
+
+
+---
 About
 ----- 
 
