@@ -1,10 +1,12 @@
-
+---
+# AI Diagram Generator - Copilot for draw.io Desktop — text to  Diagram Generator
+Draw Diagrams by using ai-drawio-copilot - auto-creates shapes, layouts, and connections from user instructions.
 --- 
 **New Feature Launch**
 drawio-desktop-29.3.6-ai-copilot-v1.0.0
 ## 🚀 Download AI Copilot Build
 
-Prebuilt Windows installer (no build required):
+ installer - Click Below link to download drawio-ai-copilot:
 
 👉 https://github.com/AI-Solutions-KK/drawio-ai-copilot/releases/latest
 
