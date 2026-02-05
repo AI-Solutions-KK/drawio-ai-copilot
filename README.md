@@ -16,6 +16,9 @@ Draw Diagrams by using ai-drawio-copilot - auto-creates shapes, layouts, and con
 drawio-desktop-29.3.6-ai-copilot-v1.0.0
 ## 🚀 Download AI Copilot Build
 
+## See Live Demo here - Haw to Install & Use
+ - https://www.linkedin.com/posts/karan-tatyaso-kamble-b06762383_ai-generativeai-productivity-activity-7425215016288821249-ijua?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF6ePbYB2-R3jRZcQSBj50QdJSCRmAI6Y2s
+
  Installer - Click Below link to download drawio-ai-copilot:
 
 👉 https://github.com/AI-Solutions-KK/drawio-ai-copilot/releases/latest
